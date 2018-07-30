@@ -1,0 +1,28 @@
+/* cambia el tamaño de la letra */
+.User{
+    font-size: 14px;
+}
+/*Alinea a la izquierda y da un margen top de cero a Todos los div que funcionan como botones */
+.alignLeft{
+    text-align: left ;
+    margin-top: 0px;
+}
+/*Cambia de color a azul*/
+.colorBlue{
+   color:rgb(33, 189, 236)
+}
+/*Agrega el hover al boton para el colapso*/
+#Menu:hover{
+background-color:rgb(236, 231, 231);
+}
+/*Quita el margen inferior*/
+.linea
+{
+    margin-bottom: 0px;
+}
+/*Cambia el margen izquierdo a cero*/
+.marginL0
+{
+    margin-left: 0px;
+}
+
