@@ -1,0 +1,48 @@
+<div>
+  <div class="row mt-3 marginL0">
+    <div class="col-2 mt-auto mb-auto pr-0 ">
+      <img class="img-fluid rounded-circle" src="http://via.placeholder.com/50x50">
+    </div>
+    <div class="col-8">
+      <div class="User">
+        <span>
+          <a href="">Salvador Almaraz Montemayor</a>
+        </span>
+      </div>
+      <div class="User">
+        <span>Activo(a) hace 5 horas</span>
+      </div>
+    </div>
+    <div class="col-2 mt-auto mb-auto">
+      <i class="fas fa-cog"></i>
+    </div>
+  </div>
+</div>
+<hr class="linea">
+<div>
+  <div id="Menu" class="btn btn-block alignLeft" (click)="colapso()" [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
+    Opciones   <i class= {{img}}></i>
+  </div>
+  <div id="collapseExample" [ngbCollapse]="isCollapsed">
+    <div class="btn btn-block alignLeft">
+      <i class="fas fa-search colorBlue mr-2"></i>
+      Buscar en la conversación
+    </div>
+    <div class="btn btn-block alignLeft">
+      <i class="fas fa-pen-fancy colorBlue mr-2"></i>
+      Editar apodos
+    </div>
+    <div class="btn btn-block alignLeft">
+      <i class="fas fa-palette colorBlue mr-2"></i>
+      Cambiar color
+    </div>
+    <div class="btn btn-block alignLeft">
+      <i class="far fa-thumbs-up colorBlue mr-2"></i>
+      Cambiar emoji
+    </div>
+    <div class="btn btn-block alignLeft">
+      <i class="far fa-bell colorBlue mr-2"></i>
+      Notificacion
+    </div>
+  </div>
+</div>
