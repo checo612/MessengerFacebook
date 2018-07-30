@@ -8,13 +8,15 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MensajesComponent } from './components/mensajes/mensajes.component';
 import { UsuariosComponent } from './components/usuarios/usuarios.component';
 import { InfoComponent } from './components/info/info.component';
+import { ChatMensajesComponent } from './components/chat-mensajes/chat-mensajes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MensajesComponent,
     UsuariosComponent,
-    InfoComponent
+    InfoComponent,
+    ChatMensajesComponent,
   ],
   imports: [
     BrowserModule,
