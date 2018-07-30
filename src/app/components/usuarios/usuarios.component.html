@@ -1,48 +1,38 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-3">
-      <div class="row navuser mt-2">
-        <div class="col-3 ">
-          <i class="fas fa-cog colorBlue"></i>
-          <i class="fas fa-circle colorBlue ml-1"></i>
-        </div>
-        <div class="col-7 ">
-          <p class="text-center colorBlue">Messenger</p>
-        </div>
-        <div class="col-1 ">
-          <i class="far fa-edit colorBlue"></i>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col p-1">
-          <label class="sr-only" for="inlineFormInputGroup">Username</label>
-          <div class="input-group mb-2">
-            <div class="input-group-prepend">
-              <div class="input-group-text">
-                <i class="fas fa-search"></i>
-              </div>
-            </div>
-            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Search Messenger">
-          </div>
+<div class="row navuser mt-2">
+  <div class="col-3 ">
+    <i class="fas fa-cog colorBlue"></i>
+    <i class="fas fa-circle colorBlue ml-1"></i>
+  </div>
+  <div class="col-7 ">
+    <p class="text-center colorBlue">Messenger</p>
+  </div>
+  <div class="col-1 ">
+    <i class="far fa-edit colorBlue"></i>
+  </div>
+</div>
+<div class="row">
+  <div class="col p-1">
+    <label class="sr-only" for="inlineFormInputGroup">Username</label>
+    <div class="input-group mb-2">
+      <div class="input-group-prepend">
+        <div class="input-group-text">
+          <i class="fas fa-search"></i>
         </div>
       </div>
-      <div class="row">
-        <div class="col p-0" data-spy="scroll" data-target="#divMessenger" [ngStyle]=" { 'overflow-y': 'scroll', 'height': '88vh' }">
-          <div class="row" *ngFor="let number of numbers">
-            <div class="col-3 ">
-              <img src="https://www.w3schools.com/howto/img_avatar.png" alt="" class="imgUser ml-3">
-            </div>
-            <div class="col-9 ">
-              <h6>usuario</h6>
-              <p>conversacion sdfsdfsdfdfsdfsd</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
+      <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Search Messenger">
     </div>
-    <div class="col-9 bg-primary" id="divMessenger">
-      hi
+  </div>
+</div>
+<div class="row">
+  <div class="col p-0" data-spy="scroll" data-target="#divMessenger" [ngStyle]=" { 'overflow-y': 'scroll', 'height': '84vh' }">
+    <div class="row" *ngFor="let number of numbers">
+      <div class="col-3 ">
+        <img src="https://www.w3schools.com/howto/img_avatar.png" alt="" class="imgUser ml-3">
+      </div>
+      <div class="col-9 ">
+        <h6>usuario</h6>
+        <p>conversacion sdfsdfsdfdfsdfsd</p>
+      </div>
     </div>
   </div>
 </div>
