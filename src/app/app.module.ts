@@ -5,12 +5,16 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MensajesComponent } from './components/mensajes/mensajes.component';
 import { UsuariosComponent } from './components/usuarios/usuarios.component';
+import { InfoComponent } from './components/info/info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UsuariosComponent
+    MensajesComponent,
+    UsuariosComponent,
+    InfoComponent
   ],
   imports: [
     BrowserModule,

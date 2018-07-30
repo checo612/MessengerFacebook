@@ -1,2 +1,24 @@
-<app-usuarios></app-usuarios>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3 col-xs-12">
+      <app-usuarios></app-usuarios>
+    </div>
+    <div class="col-md-9 col-xs-12">
+      <div class="row">
+        <div class="col text-center">
+          <h5>Nombre de conversacion</h5>
+        </div>
+        <hr>
+      </div>
+      <div class="row">
+        <div class="col-md-8 col-xs-12">
+            <app-mensajes></app-mensajes>
+        </div>
+        <div class="col-md-4 col-xs-12 padingCol">
+          <app-info></app-info>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <router-outlet></router-outlet>
