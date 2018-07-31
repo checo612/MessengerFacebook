@@ -1,0 +1,27 @@
+<!-- <div class="row">
+  <div class="col pt-5">
+    <p>
+      <span class="bg-primary p-2" style="border-radius: 25px">ewioñfioewmfew</span>
+    </p>
+    <p class="text-right">
+      <span class="bg-light p-2"  style="border-radius: 25px">wiñewdwe</span>
+    </p>
+    <p>
+      <span class="bg-primary p-2" style="border-radius: 25px">ioewoidmoimweoidmewpoidmewop</span>
+    </p>
+  </div>
+</div> -->
+<div class="row">
+    <div class="col py-3" data-spy="scroll" data-target="#divMessenger" [ngStyle]=" { 'overflow-y': 'scroll', 'height': '84vh' }">
+<div class="row"  *ngFor="let m of Mensajes">
+    <div class="col ">
+      <p *ngIf="m.Id=='1'">
+        <span class="bg-primary p-2" style="border-radius: 25px">{{m.Mensajes}}</span>
+      </p>
+      <p class="text-right"*ngIf="m.Id=='2'">
+        <span class="bg-light p-2"  style="border-radius: 25px">{{m.Mensajes}}</span>
+      </p>
+    </div>
+  </div>
+  </div>
+  </div>
