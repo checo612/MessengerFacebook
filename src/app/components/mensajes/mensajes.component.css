@@ -1,7 +1,10 @@
-     button{
-        background-color: transparent;
-        
-     }
+button{
+    background-color: transparent;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
 
      
     
