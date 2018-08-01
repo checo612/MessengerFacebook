@@ -12,14 +12,14 @@
   </div>
 </div>
 <div class="row">
-  <div class="col" [ngStyle]=" { 'overflow-y': 'scroll', 'height': '84vh' }">
-    <div class="row" *ngFor="let user of Usuarios | filtroUsuarios : filtro">
-      <div class="col-3 ">
-        <img src="https://www.w3schools.com/howto/img_avatar.png" alt="" class="img-fluid imgUser ">
+  <div class="col" [ngStyle]=" { 'overflow-y': 'scroll', 'height': '83vh' }">
+    <div role="button" routerLink="/mensaje/{{user.Nombre | userpiper}}"  class="row hover" *ngFor="let user of Usuarios | filtroUsuarios : filtro">
+      <div class="col-3 mt-auto mb-auto">
+        <img src="https://www.w3schools.com/howto/img_avatar.png" alt="" class="img-fluid imgUser">
       </div>
       <div class="col-9 ">
-        <h6>{{user.Nombre}}</h6>
-        <p>{{user.Conversacion}}</p>
+          <h6 class="pt-2">{{user.Nombre | titlecase}}</h6>
+          <p>{{user.Conversacion}}</p>
       </div>
     </div>
   </div>

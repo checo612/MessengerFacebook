@@ -12,6 +12,7 @@ import { ChatMensajesComponent } from './components/chat-mensajes/chat-mensajes.
 import { FiltroUsuariosPipe } from './pipes/filtro-usuarios.pipe';
 import { StatusDirective } from './directives/status.directive';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { UserpiperPipe } from './pipes/userpiper.pipe';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     FiltroUsuariosPipe,
     StatusDirective,
     NavbarComponent,
+    UserpiperPipe,
   ],
   imports: [
     BrowserModule,
