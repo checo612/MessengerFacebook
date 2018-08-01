@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, ViewChildren, ViewChild } from '@angular/core';
 @Component({
   selector: 'app-usuarios',
   templateUrl: './usuarios.component.html',
@@ -15,16 +14,9 @@ Usuarios=[
 {Nombre:"Paco almaraz" ,Conversacion:"sdfsdfsdfdfsdfsd"},
 {Nombre:"Sara almaraz" ,Conversacion:"sdfsdfsdfdfsdfsd"}
 ];
-Activo:string="Activar";
 filtro:string;
-estado = false;
   constructor() {  
-  }
-  estados() {
-    this.estado = !this.estado;
-    this.estado? this.Activo="Desactivar":this.Activo="Activar"
   }
   ngOnInit() {
   }
-
 }

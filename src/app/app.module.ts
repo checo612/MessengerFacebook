@@ -10,6 +10,8 @@ import { UsuariosComponent } from './components/usuarios/usuarios.component';
 import { InfoComponent } from './components/info/info.component';
 import { ChatMensajesComponent } from './components/chat-mensajes/chat-mensajes.component';
 import { FiltroUsuariosPipe } from './pipes/filtro-usuarios.pipe';
+import { StatusDirective } from './directives/status.directive';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { FiltroUsuariosPipe } from './pipes/filtro-usuarios.pipe';
     UsuariosComponent,
     InfoComponent,
     ChatMensajesComponent,
-    FiltroUsuariosPipe
+    FiltroUsuariosPipe,
+    StatusDirective,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,

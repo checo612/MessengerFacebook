@@ -1,24 +1,3 @@
-<div class="row navuser mt-2">
-  <div class="col-3 ">
-    <span ngbDropdown>
-      <i class=" btn p-0 fas fa-cog colorBlue" id="dropdownBasic1" ngbDropdownToggle></i>
-      <div class="mt-2" ngbDropdownMenu aria-labelledby="dropdownBasic1">
-        <button (click)="estados()" class="dropdown-item">{{Activo}}</button>
-      </div>
-    </span>
-    <i [ngStyle]="{color:'#00fa15'}" class="fas fa-circle activo ml-1" *ngIf="estado; else inactivo "></i>
-    <ng-template #inactivo>
-      <i [ngStyle]="{color:'grey'}" class="fas fa-circle activo  ml-1"></i>
-    </ng-template>
-
-  </div>
-  <div class="col-7 ">
-    <p class="text-center colorBlue">Messenger</p>
-  </div>
-  <div class="col-1 ">
-    <i class="far fa-edit colorBlue"></i>
-  </div>
-</div>
 <div class="row">
   <div class="col p-1">
     <label class="sr-only" for="inlineFormInputGroup">Username</label>
