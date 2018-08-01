@@ -12,13 +12,13 @@
   </div>
 </div>
 <div class="row">
-  <div class="col" [ngStyle]=" { 'overflow-y': 'scroll', 'height': '84vh' }">
+  <div class="col" [ngStyle]=" { 'overflow-y': 'scroll', 'height': '83vh' }">
     <div class="row" *ngFor="let user of Usuarios | filtroUsuarios : filtro">
       <div class="col-3 ">
         <img src="https://www.w3schools.com/howto/img_avatar.png" alt="" class="img-fluid imgUser ">
       </div>
       <div class="col-9 ">
-        <h6>{{user.Nombre}}</h6>
+        <h6>{{user.Nombre | titlecase}}</h6>
         <p>{{user.Conversacion}}</p>
       </div>
     </div>
