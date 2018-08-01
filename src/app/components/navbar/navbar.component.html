@@ -1,0 +1,29 @@
+<div class="row" style="border-bottom: 1px solid; border-color: #cccccc">
+  <div class="col-md-3 col-xs-12" style="border-right: 1px solid; border-color: #cccccc">
+    <div class="row pt-2">
+      <div class="col-3">
+        <span ngbDropdown>
+          <i class="fas fa-cog text-primary" id="dropdownBasic1" ngbDropdownToggle></i>
+          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <button class="dropdown-item" (click)="setOnline()">
+              <i class="fas fa-circle text-success pr-2"></i>Conectado</button>
+            <button class="dropdown-item" (click)="setOffline()">
+              <i class="fas fa-circle text-secondary pr-2"></i>Desconectado</button>
+          </div>
+        </span>
+        <i class="fas fa-circle pl-2" [ngClass]="{'text-success': online, 'text-secondary': offline}"></i>
+      </div>
+      <div class="col-7">
+        <h5 class="text-center">Messenger</h5>
+      </div>
+      <div class="col-1">
+        <i class="far fa-edit text-primary"></i>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-9 col-xs-12 text-center">
+    <h5 style="margin-bottom: 0rem">Juan Garza</h5>
+    <small>Messenger</small>
+  </div>
+  <hr>
+</div>

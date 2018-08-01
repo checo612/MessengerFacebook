@@ -1,0 +1,4 @@
+.dropdown-toggle:empty::after {
+    margin-left: 0;
+    display: none;
+}
