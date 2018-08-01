@@ -9,6 +9,7 @@ import { MensajesComponent } from './components/mensajes/mensajes.component';
 import { UsuariosComponent } from './components/usuarios/usuarios.component';
 import { InfoComponent } from './components/info/info.component';
 import { ChatMensajesComponent } from './components/chat-mensajes/chat-mensajes.component';
+import { FiltroUsuariosPipe } from './pipes/filtro-usuarios.pipe';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ChatMensajesComponent } from './components/chat-mensajes/chat-mensajes.
     UsuariosComponent,
     InfoComponent,
     ChatMensajesComponent,
+    FiltroUsuariosPipe
   ],
   imports: [
     BrowserModule,

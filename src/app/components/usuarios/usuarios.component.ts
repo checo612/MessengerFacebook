@@ -6,11 +6,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./usuarios.component.css']
 })
 export class UsuariosComponent implements OnInit {
-numbers;
-  constructor() {
-    this.numbers = Array(50).fill(0).map((x, i) => i);
+Usuarios=[
+{Nombre:"Salvador almaraz",Conversacion:"sdfsdfsdfdfsdfsd"},
+{Nombre:"Juan almaraz" ,Conversacion:"sdfsdfsdfdfsdfsd"},
+{Nombre:"Pedro almaraz" ,Conversacion:"sdfsdfsdfdfsdfsd"},
+{Nombre:"Luis almaraz" ,Conversacion:"sdfsdfsdfdfsdfsd"},
+{Nombre:"Laura almaraz" ,Conversacion:"sdfsdfsdfdfsdfsd"},
+{Nombre:"Paco almaraz" ,Conversacion:"sdfsdfsdfdfsdfsd"},
+{Nombre:"Sara almaraz" ,Conversacion:"sdfsdfsdfdfsdfsd"}
+];
+Activo:string="Activar";
+filtro:string;
+estado = false;
+  constructor() {  
   }
-
+  estados() {
+    this.estado = !this.estado;
+    this.estado? this.Activo="Desactivar":this.Activo="Activar"
+  }
   ngOnInit() {
   }
 
