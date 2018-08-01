@@ -20,7 +20,7 @@ Mensajes = [
   {Id: '1', Mensajes: 'jaja'},
   {Id: '2', Mensajes: 'lkiwdiowe'},
   {Id: '2', Mensajes: 'lkiwdiowe'},
-  {Id: '1', Mensajes: 'mensajeasdasadssadfsadf'},
+  {Id: '1', Mensajes: 'mensajea'},
   {Id: '1', Mensajes: 'asadsadfsadf'},
   {Id: '2', Mensajes: 'lkiwdiowe'},
   {Id: '1', Mensajes: 'mensajeasdasadssadfsadf'},
