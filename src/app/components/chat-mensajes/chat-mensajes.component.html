@@ -1,12 +1,14 @@
 <div class="row">
-  <div class="col py-3" [ngStyle]=" { 'overflow-y': 'scroll', 'height': '84vh' }">
-    <div class="row " *ngFor="let m of Mensajes">
-      <div class="col ">
-        <p *ngIf="m.Id=='1'"  class="bg-primary p-2 pr-3 pl-3" style="border-radius: 25px; float: left;">
-          <span style=" word-wrap: break-word;">{{m.Mensajes}}</span>
+  <div class="col py-3" [ngStyle]=" { 'overflow-y': 'scroll', 'height': '84vh' }" >
+    <div class="row" *ngFor="let mensaje of getMensajes()">
+      <div class="col">
+        <p *ngIf="mensaje.id_receptor==getIdUser()" 
+            class="bg-primary p-2 pr-3 pl-3" style="border-radius: 25px; float: right;">
+            <span style=" word-wrap: break-word;">{{mensaje.mensaje}}</span>
         </p>
-        <p class="bg-light p-2 pr-3 pl-3 text-right" *ngIf="m.Id=='2'"  style="border-radius: 25px; float: right;">
-          <span style=" word-wrap: break-word;">{{m.Mensajes}}</span>
+        <p *ngIf="mensaje.id_emisor==getIdUser()"
+            class="bg-light p-2 pr-3 pl-3 text-right" style="border-radius: 25px; float: left;">
+            <span style=" word-wrap: break-word;">{{mensaje.mensaje}}</span>
         </p>
       </div>
     </div>
