@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./info.component.css']
 })
 export class InfoComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit() {
@@ -20,7 +19,6 @@ export class InfoComponent implements OnInit {
     }
     else {
       this.img = "fas fa-angle-down mt-auto mb-auto float-right";
-    
     }
   }
 

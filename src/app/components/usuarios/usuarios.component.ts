@@ -1,22 +1,38 @@
-import { Component, OnInit, ViewChildren, ViewChild } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { UsuariosService } from '../../services/usuarios.service';
+import { Key } from '../../../../node_modules/protractor';
+
 @Component({
   selector: 'app-usuarios',
   templateUrl: './usuarios.component.html',
   styleUrls: ['./usuarios.component.css']
 })
-export class UsuariosComponent implements OnInit {
-  Usuarios = [
-  {Nombre: 'Salvador almaraz', Conversacion: 'sdfsdfsdfdfsdfsd'},
-  {Nombre: 'Ricardo Hernandez', Conversacion: 'conversacion'},
-  {Nombre: 'Sergio guzman', Conversacion: 'conversacion'},
-  {Nombre: 'Alex Reyna', Conversacion: 'conversacion'},
-  {Nombre: 'Laura almaraz', Conversacion: 'conversacion'},
-  {Nombre: 'Paco almaraz', Conversacion: 'conversacion'},
-  {Nombre: 'Sara almaraz', Conversacion: 'conversacion'}
-  ];
+export class UsuariosComponent implements OnInit, OnChanges {
   filtro: string;
-  constructor() {
-  }
+  getMensaje: any;
+  lastMensaje: string;
+
+  constructor(private route: ActivatedRoute, private usuariosService: UsuariosService) {}
+
   ngOnInit() {
+  }
+
+  ngOnChanges() {
+  }
+
+  public getUsuarios() {
+    return this.usuariosService.getUsuarios();
+  }
+
+
+  public getLastMensaje(id) {
+    this.getMensaje = this.usuariosService.getLastMensaje(id);
+    if (this.getMensaje === 'undefined') {
+      this.lastMensaje = 'Sin conversación';
+      return this.lastMensaje;
+    } else {
+      return this.getMensaje.mensaje;
+    }
   }
 }
