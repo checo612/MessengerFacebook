@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { UsuariosService } from '../../services/usuarios.service';
+import { Mensajes } from '../../Modelos/mensajes';
+import { MensajesService } from '../../services/mensajes.service';
 
 @Component({
   selector: 'app-mensajes',
@@ -8,27 +10,25 @@ import { UsuariosService } from '../../services/usuarios.service';
   styleUrls: ['./mensajes.component.css']
 })
 export class MensajesComponent implements OnInit {
-  id_emisor: string;
+  id_reseptor: string;
   mensaje: string;
-  mensajeObject: any;
-  constructor(private route: ActivatedRoute, private mensajesService: UsuariosService) { }
-
+  public mensajeObject: Mensajes = new Mensajes();
+  constructor(private route: ActivatedRoute,  private _mensaje: MensajesService) { }
   ngOnInit() {
   }
-
   private formMensaje() {
-    this.id_emisor = this.route.snapshot.paramMap.get('id');
-    this.mensajeObject = { id_emisor: 10, id_receptor: this.id_emisor, mensaje: this.mensaje };
+    this.id_reseptor = this.route.snapshot.paramMap.get('id');
+    this.mensajeObject.id_emisor = this._mensaje.myUser;
+    this.mensajeObject.id_receptor = this.id_reseptor;
+    this.mensajeObject.mensaje = this.mensaje;
     return this.mensajeObject;
   }
-
   public sendMensaje() {
     if (!this.mensaje || /^\s*$/.test(this.mensaje)) {
       return false;
     } else {
-    this.mensajesService.postMensaje(this.formMensaje());
-    this.mensaje = '';
+      this._mensaje.addnew(this.formMensaje());
+      this.mensaje = '';
     }
   }
-
 }
