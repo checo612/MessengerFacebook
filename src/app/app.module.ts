@@ -13,6 +13,10 @@ import { FiltroUsuariosPipe } from './pipes/filtro-usuarios.pipe';
 import { StatusDirective } from './directives/status.directive';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { UserpiperPipe } from './pipes/userpiper.pipe';
+// firebase
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,9 @@ import { UserpiperPipe } from './pipes/userpiper.pipe';
     BrowserModule,
     AppRoutingModule,
     NgbModule.forRoot(),
-    FormsModule
+    FormsModule,
+    AngularFireDatabaseModule,
+    AngularFireModule.initializeApp(environment.firebase),
   ],
   providers: [],
   bootstrap: [AppComponent]

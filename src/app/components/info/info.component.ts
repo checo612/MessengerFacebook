@@ -7,18 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InfoComponent implements OnInit {
   constructor() { }
-
+  public isCollapsed = false;
+  public img = 'fas fa-angle-down mt-auto mb-auto float-right';
   ngOnInit() {
   }
-  public isCollapsed = false;
-  public img: string="fas fa-angle-down mt-auto mb-auto float-right";
+
   colapso() {
     this.isCollapsed = !this.isCollapsed;
     if (this.isCollapsed) {
-      this.img = "fas fa-angle-left mt-auto mb-auto float-right";
-    }
-    else {
-      this.img = "fas fa-angle-down mt-auto mb-auto float-right";
+      this.img = 'fas fa-angle-left mt-auto mb-auto float-right';
+    } else {
+      this.img = 'fas fa-angle-down mt-auto mb-auto float-right';
     }
   }
 
