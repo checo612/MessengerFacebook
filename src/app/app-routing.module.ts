@@ -4,7 +4,8 @@ import { MensajesComponent } from './components/mensajes/mensajes.component';
 import { ChatMensajesComponent } from './components/chat-mensajes/chat-mensajes.component';
 
 const routes: Routes = [
-  // { path: 'mensaje/:user/:id', component: MensajesComponent }
+  {path: '' , component: ChatMensajesComponent},
+  // { path: 'mensaje/:user', component: ChatMensajesComponent },
   { path: 'mensaje', component: MensajesComponent},
   { path: 'mensaje/:user/:id', component: MensajesComponent}
 ];
